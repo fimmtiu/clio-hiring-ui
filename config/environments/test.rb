@@ -35,17 +35,7 @@ ClioHiringUi::Application.configure do
   config.active_support.deprecation = :stderr
 
   # Mailer
-  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: ENV["SMTP_SERVER"],
-    openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE,
-    port: ENV["SMTP_PORT"].to_i,
-    domain: ENV["MAILER_DOMAIN"],
-    authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["SMTP_USER"],
-    password: ENV["SMTP_PWD"]
-  }
+  config.action_mailer.default_options = { from: 'test@example.com' }
+
 end

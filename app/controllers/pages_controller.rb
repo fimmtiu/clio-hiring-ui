@@ -1,12 +1,7 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: [
-    :inside
-  ]
+  before_action :authenticate_user!, only: [:instructions]
 
-  def home
-  end
-
-  def inside
+  def instructions
   end
   
   

@@ -17,9 +17,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 # Kaminari: https://github.com/amatsuda/kaminari
 gem 'kaminari', '0.16.3'
 
-# Friendly_id: https://github.com/norman/friendly_id
-gem 'friendly_id', '5.1.0'
-
 # Font-awesome: https://github.com/FortAwesome/font-awesome-sass
 gem 'font-awesome-sass', '4.3.2.1'
 
