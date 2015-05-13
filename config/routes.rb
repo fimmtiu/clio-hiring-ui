@@ -1,12 +1,9 @@
 ClioHiringUi::Application.routes.draw do
-  root "pages#instructions"
+  root "instructions#show"
   
   devise_for :users
 
-  namespace :admin do
-    root "base#index"
-    resources :users    
-  end
+  resource :instructions, only: [:show]
 
   resources :simulations, except: [:edit]
 

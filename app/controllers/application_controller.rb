@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
-  before_filter :reject_locked!, if: :devise_controller?
 
 
   # Devise permitted params
@@ -14,41 +13,11 @@ class ApplicationController < ActionController::Base
       :password,
       :password_confirmation)
     }
-    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(
-      :email,
-      :password,
-      :password_confirmation,
-      :current_password
-      )
-    }
   end
 
   # Redirects on successful sign in
   def after_sign_in_path_for(resource)
     root_path
   end
-
-  # Auto-sign out locked users
-  def reject_locked!
-    if current_user && current_user.locked?
-      sign_out current_user
-      user_session = nil
-      current_user = nil
-      flash[:alert] = "Your account is locked."
-      flash[:notice] = nil
-      redirect_to root_url
-    end
-  end
-  helper_method :reject_locked!
-
-  # Only permits admin users
-  def require_admin!
-    authenticate_user!
-
-    if current_user && !current_user.admin?
-      redirect_to root_path
-    end
-  end
-  helper_method :require_admin!
 
 end

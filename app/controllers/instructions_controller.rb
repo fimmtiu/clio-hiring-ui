@@ -1,7 +1,7 @@
-class PagesController < ApplicationController
+class InstructionsController < ApplicationController
   before_action :authenticate_user!, only: [:instructions]
 
-  def instructions
+  def show
   end
   
   
