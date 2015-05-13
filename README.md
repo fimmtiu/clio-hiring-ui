@@ -25,9 +25,14 @@ We want to wrap a Rails UI around the Gif Simulator you did (https://github.com/
 
 ### Create the UI
 
-  * A user should be able to see the current state of a particular game. 
-  * A user should be able to see the verdict of the current state of the game.
-  * While the user is looking at a particular game, it should automatically and asynchronously update itself to the next state at a regular interval. 
+We have created a SimulationsController and some skeleton views to help get you started. 
+
+  * A user should be able to see all of their current simulations
+  * A user should be able to create a new simulation with user-specified dimensions along with a user-specified identifier
+  * A user should be able to see the current state of a particular simulation. 
+  * A user should be able to asynchronously delete a simulation
+  * A user should be able to see the verdict of the current state of the simulation.
+  * While the user is looking at a particular simulation, it should automatically and asynchronously update itself to the next state at a regular interval. 
 
 ### Test it
 
