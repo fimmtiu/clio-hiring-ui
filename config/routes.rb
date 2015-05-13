@@ -8,4 +8,6 @@ ClioHiringUi::Application.routes.draw do
     resources :users    
   end
 
+  resources :simulations, except: [:edit]
+
 end

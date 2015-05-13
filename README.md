@@ -34,10 +34,3 @@ We want to wrap a Rails UI around the Gif Simulator you did (https://github.com/
   * Write some tests using whatever testing framework you'd like. Your tests should have a reasonable test coverage of the code you have written.  
     * See: http://guides.rubyonrails.org/testing.html
     * Possible testing frameworks include, but are not limited to: `rspec`, `minitest`, `test-unit` 
-
-### Security
-
-  * Security is very important to a web app. Along with this project, submit a list of security issues that can occur in a web application and for each one tell us:
-    * What makes it bad?
-    * Is it possible that this app is vulnerable to it? If so, how would you fix it. If not, how do you know? (Don't worry about external gems here)
-    
