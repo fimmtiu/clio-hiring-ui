@@ -32,7 +32,8 @@ We have created a SimulationsController and some skeleton views to help get you 
   * A user should be able to see the current state of a particular simulation. 
   * A user should be able to asynchronously delete a simulation
   * A user should be able to see the verdict of the current state of the simulation.
-  * While the user is looking at a particular simulation, it should automatically and asynchronously update itself to the next state at a regular interval. 
+  * While the user is looking at a particular simulation, it should automatically and asynchronously update itself to the next state at a regular interval.
+  * A user should not be able to view, update, or delete the simulations of other users.
 
 ### Test it
 
