@@ -24,6 +24,8 @@ gem 'bootstrap-sass'
 group :development, :test do
   gem 'byebug'
   gem 'web-console'
+  gem 'rspec-rails'
+  gem 'pry'
 
   # Spring: https://github.com/rails/spring
   gem 'spring'
