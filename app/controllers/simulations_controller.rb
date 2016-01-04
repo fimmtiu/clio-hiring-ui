@@ -1,25 +1,27 @@
 class SimulationsController < ApplicationController
 
   def index
-    @simulations = []
+    raise NotImplementedError   # FIXME
   end
 
   def new
+    raise NotImplementedError   # FIXME
   end
 
   def create
+    raise NotImplementedError   # FIXME
   end
 
   def show
+    raise NotImplementedError   # FIXME
   end
-  
+
   def update
-    # This can be used for updating the next state transition.
-    # This action should be asynchronous
+    raise NotImplementedError   # FIXME
   end
 
   def destroy
-    # This action should be asynchronous.
+    raise NotImplementedError   # FIXME
   end
 
 end
