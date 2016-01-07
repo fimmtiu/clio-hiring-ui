@@ -1,7 +1,7 @@
 # Clio Hiring Project
 
 This project involves creating a simulator for a simple state machine, then
-making the back end of a Rails web interface for it.
+writing the back end of a Rails web interface for it.
 
 ## Environment Requirements
 
@@ -31,7 +31,7 @@ dominant.
 
 The stub for this code is in lib/simulator.rb, and the specs are in
 spec/lib/simulator.rb. You're welcome to add any helper classes or modules
-that you feel necessary. In lib/simulator.rb, please implement the
+that you deem necessary. In lib/simulator.rb, please implement the
 following methods:
 
 #### Simulator#initialize(seating_arrangement)
@@ -54,7 +54,7 @@ following methods:
 * Returns an array of arrays which represents the people in the current
   seating arrangement.
 
-* Each element in the inner array is one of `:hard`, `:soft`, or `:none`.
+* Each element in the inner arrays is one of `:hard`, `:soft`, or `:none`.
 
 #### Simulator#next
 
