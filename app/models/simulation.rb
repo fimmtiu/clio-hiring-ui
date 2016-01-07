@@ -21,4 +21,19 @@ class Simulation < ActiveRecord::Base
       row.map { [:hard, :soft, :none].sample }
     end
   end
+
+  def next
+    sim = Simulator.new(state)
+    sim.next
+    self.state = sim.state
+  end
+
+  def verdict
+    sim = Simulator.new(state)
+    sim.verdict
+  end
+
+  def at(x, y)
+    state[y][x]
+  end
 end

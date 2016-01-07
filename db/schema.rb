@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141010133701) do
+ActiveRecord::Schema.define(version: 20160103235721) do
+
+  create_table "simulations", force: :cascade do |t|
+    t.integer "user_id",                         null: false
+    t.string  "name",    limit: 64, default: "", null: false
+    t.text    "state",                           null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",              limit: 96, default: "", null: false

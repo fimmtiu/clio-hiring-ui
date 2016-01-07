@@ -1,8 +1,22 @@
-<h1>Simulation Name</h1>
+<h1><%= @simulation.name %></h1>
 
-<ol>
-  <li> This should display the seating arrangement of the current simulation </li>
-  <li> This should dispaly the verdict of the current state of the simulation </li>
-  <li> It should automatically and asynchronously update itself to the next state at a regular interval.  </li>
-</ol>
+<div id="sim-table">
+  <%= render partial: "sim_table" %>
+</div>
+
 <%= link_to 'Back', simulations_path %>
+
+<script>
+  function loadSimTable(elem) {
+    setTimeout(function() {
+      jQuery.ajax({
+        url: "<%= simulation_path(@simulation) %>",
+        method: "PUT",
+        success: function (data) { elem.html(data); }
+      });
+      loadSimTable(elem);
+    }, 3000);
+  };
+
+  loadSimTable(jQuery("#sim-table"));
+</script>
