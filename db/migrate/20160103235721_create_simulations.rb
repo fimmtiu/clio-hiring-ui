@@ -1,4 +1,4 @@
-class CreateSimulators < ActiveRecord::Migration
+class CreateSimulations < ActiveRecord::Migration
   def change
     # FIXME
   end
