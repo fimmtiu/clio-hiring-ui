@@ -17,6 +17,8 @@ class SimulationsController < ApplicationController
   end
 
   def update
+    # This should return a chunk of HTML containing the simulation grid and verdict.
+    # (See app/views/simulations/show.html.erb.)
     raise NotImplementedError   # FIXME
   end
 

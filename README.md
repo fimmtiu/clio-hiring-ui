@@ -3,6 +3,9 @@
 This project involves creating a simulator for a simple state machine, then
 writing the back end of a Rails web interface for it.
 
+If you have any questions about the project specifications, please email
+us; we'll be happy to clarify.
+
 ## Environment Requirements
 
 The app must run on:
